@@ -1,73 +1,39 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Nest JS란? 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Node JS를 폏나게 사용할수 있는 프레임 워크.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Nest JS 내부적 구성
 
-## Description
+내부적으로 Nest는 Node.js 프레임 워크 (Express / Fastify)위에 추상화 수준을 제공하지만 API를 개발자에게 직접 노출합니다. 이를 통해 개라자는 기본 플랫폼에서 사용할 수 있는 수많은 타사 모듈을 자유롭게 사용할 수 있음.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NestJS의 철학
 
-## Installation
+Node를 위한 훌륭한 라이브러리, 도우미 및 도구가 많이 존재.
+Nest는 개발자와 팀이 고도로 테스트 가능하고 확장 가능하여, 느슨하게 결합되고 유지 관리가 쉬운 애플리케이션을 만들 수 있고 즉시 사용 가능한 애플리케이션 아키텍처를 제공.
+Angular에서 크게 영감을 받음.
 
-```bash
-$ npm install
-```
+Nest JS 공식 문서
 
-## Running the app
+https://docs.nestjs.com
 
-```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
+폴더 안에서 nest 기본 구조 생성 
 
-# production mode
-$ npm run start:prod
-```
+npm i -g @nestjs/cli
 
-## Test
+nest new ./
 
-```bash
-# unit tests
-$ npm run test
+앱 실행
 
-# e2e tests
-$ npm run test:e2e
+npm start:dev
 
-# test coverage
-$ npm run test:cov
-```
+Nest JS 기본 구조 설명
 
-## Support
+eslintrc.js -> 개발자들이 특정한 규칙을 가지고 코드를 깔끔하게 짤 수 있게 도와주는 라이브러리
+타입스크립트를 쓰는 가이드 라인제시, 문법에 오류가 나면 알려주는 역할 등등
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+prettierrc -> 주로 코드 형식을 맞추는데 사용합니다. 작은따옴표(')를 사용할지 큰 따옴표(")를 사용할지, Indent 값을 2로줄지 4로 줄지등등, 에러 찾는 것이 아닌 코드 포맷터 역할
 
-## Stay in touch
+nest-cli.json -> nest 프로젝트를 위해 특정한 설정을 할 수 있는 json 파일
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+tsconfig.json -> 어떻게 타입스크립트를 컴파일 할지 설정
